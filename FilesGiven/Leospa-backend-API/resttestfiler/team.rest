@@ -1,0 +1,45 @@
+@port = 5029
+@route = team
+
+
+### GET - hent alle
+
+GET http://localhost:{{port}}/{{route}}
+
+
+### GET - hent ud fra ID
+
+GET http://localhost:{{port}}/{{route}}/606ac6d41d38bf796cb71c82
+
+
+
+### POST - opret ny
+
+POST http://localhost:{{port}}/{{route}}/admin
+content-type: application/json
+
+{
+    "firstname": "Karen",
+    "lastname": "Jensen",
+    "role": "Massør"
+    //"image": "hest.jpg" - brug Postman for at teste med upload af image!
+}
+
+
+
+### PUT - ret 
+
+PUT http://localhost:{{port}}/{{route}}/admin/606ac6d41d38bf796cb71c82
+content-type: application/json
+
+{
+    "firstname": "Karen Rettet",
+    "lastname": "Jensen",
+    "role": "Massør rettet"
+    //"image": "hest.jpg" - brug Postman for at teste med upload af image! 
+}
+
+
+### DELETE - slet ud fra ID
+
+DELETE http://localhost:{{port}}/{{route}}/admin/606ac6d41d38bf796cb71c82

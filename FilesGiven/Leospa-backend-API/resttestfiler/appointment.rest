@@ -1,0 +1,66 @@
+@port = 5029
+@route = appointment
+
+
+### GET - hent alle - ADMIN
+
+GET http://localhost:{{port}}/{{route}}/admin
+
+
+
+### GET - hent ud fra ID - ADMIN
+
+GET http://localhost:{{port}}/{{route}}/admin/606a2b0adc5c168a70119b59
+
+
+
+### POST - hent ud fra phone og email - IKKE ADMIN
+
+POST http://localhost:{{port}}/{{route}}/myappointments
+content-type: application/json
+
+{
+    "email": "test@mail.dk",
+    "phone": "33333333"
+}
+
+
+
+### POST - opret ny - IKKE ADMIN
+
+POST http://localhost:{{port}}/{{route}}
+content-type: application/json
+
+{
+    "name": "Lorem ipsum dolor sit amet",
+    "email": "test@mail.dk",
+    "phone": "33333333",
+    "treatment": "606a2a99dc5c168a70119b57",
+    "date": "2020-10-09",
+    "time": "10:30:00",
+    "notes": "Jeg er allergisk over for sten"
+}
+
+
+
+### PUT - ret - ADMIN
+
+PUT http://localhost:{{port}}/{{route}}/admin/606a2aa2dc5c168a70119b58
+content-type: application/json
+
+{
+    "name": "Lorem ipsum dolor sit amet",
+    "email": "test@mail.dk",
+    "phone": "33333333",
+    "treatment": "606a2a99dc5c168a70119b57",
+    "date": "2020-10-09",
+    "time": "10:30:00",
+    "notes": "Jeg er stadig allergisk over for sten"
+}
+
+
+
+
+### DELETE - slet ud fra ID
+
+DELETE http://localhost:{{port}}/{{route}}/admin/606a2aa2dc5c168a70119b58

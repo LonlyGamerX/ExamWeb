@@ -1,0 +1,29 @@
+
+//// Restore data til MongoDB
+
+1. Opret en mappe med fx navnet "mongodb" på C-drevet (VIGTIGT - det SKAL være på c-drevet) 
+
+2. Kopier leospa-mappen (ligger i mappen her) ind i mappen, du lige har lavet på c-drevet
+    ... så du har C:\mongodb\leospa ... og i leospa-mappen ligger alle json-filerne
+
+3. Brug "Stifinder" og find bin-mappen i MongoDBs Tools-mappe*  - den ser nok ca. sådan her ud: 
+    
+    C:\Program Files\MongoDB\Tools\100\bin
+    
+    *(gælder for nyere versioner - der er en anden måde i ældre versioner, når der ikke er en Tools-mappe, så sig til, hvis du ikke kan finde en Tools-mappe)
+
+4. I adresselinjen i Stifiner (hvor du kan se, at du står i bin-mappen) skriv "CMD" (dvs. du overskriver bin-mappens sti)
+
+5. Tryk ENTER (så åbner kommandovinduet) - tjek, at du nu står inde i bin-mappen i cmd-vinduet
+
+8. Kopier kommandoen herunder (vær omhyggelig med at få det hele med):
+
+    mongorestore -d runit C:\mongodb\leospa
+    
+9. Paste/indsæt kommandoen (du skal stadig være i bin-mappen) og tryk ENTER
+
+10. Nu burde MongoDB restore databasen i din mongoDB
+
+11. Åbn MongoDB (localhost)
+
+12. Tryk på refresh og tjek, at den nye database er oprettet, og at der er collections med documents og data import

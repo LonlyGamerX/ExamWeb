@@ -1,0 +1,45 @@
+@port = 5029
+@route = treatment
+
+
+### GET - hent alle
+
+GET http://localhost:{{port}}/{{route}}
+
+
+### GET - hent ud fra ID
+
+GET http://localhost:{{port}}/{{route}}/606a259b5aef1986e0b0738b
+
+
+
+### POST - opret ny
+
+POST http://localhost:{{port}}/{{route}}/admin
+content-type: application/json
+
+{
+    "title": "Ny treatment",
+    "content": "Veniam consequuntur unde magnam molestiae, voluptatem explicabo quae ut numquam aperiam inventore sunt soluta tempora eveniet dicta quas? Maxime nesciunt eligendi dicta."
+    //"image": "hest.jpg" - brug Postman for at teste med upload af image!
+    
+}
+
+
+
+### PUT - ret 
+
+PUT http://localhost:{{port}}/{{route}}/admin/606a259b5aef1986e0b0738b
+content-type: application/json
+
+{
+    "title": "Rettet: Aliquam venenatis dignissim sodales",
+    "content": "Rettet: Veniam consequuntur unde magnam molestiae, voluptatem explicabo quae ut numquam aperiam inventore sunt soluta tempora eveniet dicta quas? Maxime nesciunt eligendi dicta."
+    //"image": "hest.jpg", - brug Postman for at teste med upload af image!
+    
+}
+
+
+### DELETE - slet ud fra ID
+
+DELETE http://localhost:{{port}}/{{route}}/admin/606a259b5aef1986e0b0738b

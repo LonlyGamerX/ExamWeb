@@ -1,0 +1,340 @@
+@import "./styles/_variables.scss";
+@import "./styles/responsive.scss";
+
+* {
+  font-family: $font-family !important;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $primary-color;
+  --bs-link-color-rgb: $primary-color;
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+.Pointer {
+  cursor: pointer;
+}
+
+.pink-bg {
+  background-color: $primary-color;
+}
+
+.new-white-bg {
+  background-color: $new-white;
+}
+
+.new-white {
+  color: $new-white;
+}
+
+.txt-pink {
+  color: $primary-color;
+}
+
+.txt-grey {
+  color: $steel;
+}
+
+.txt-aligntment {
+  text-align: center;
+}
+
+.txt-small {
+  font-size: small;
+}
+
+.txt-medium {
+  font-size: medium;
+}
+
+.txt-large {
+  font-size: large;
+}
+
+.btn-pink {
+  background-color: $primary-color;
+  border-radius: 0;
+  color: white;
+}
+
+.btn-pink:hover {
+  color: black;
+  background-color: $primary-color;
+}
+
+.btn-round {
+  border-radius: 50px;
+  width: 10%;
+}
+
+.btn-round-small {
+  border-radius: 25px;
+}
+
+.btn-black {
+  background-color: black;
+  color: $new-white;
+}
+
+.btn-black:hover {
+  background-color: $steel;
+  color: black;
+}
+
+.btn-squard {
+  height: 100%;
+  width: 50%;
+}
+
+.btn-close {
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fc4d4d%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e");
+  width: 20%;
+  height: 2rem;
+}
+
+.border-pink-line {
+  border-bottom: 3px solid $primary-color;
+}
+
+.marginTop {
+  margin-top: 10%;
+}
+
+.brushImg {
+  position: absolute;
+  width: 14%;
+  top: 10%;
+}
+
+.w-66 {
+  width: 66%;
+}
+
+.w-52 {
+  width: 52%;
+}
+.Top {
+  z-index: 100000000;
+}
+
+.px-small {
+  font-size: small;
+}
+
+.IconPlay {
+  height: auto;
+  width: 15%;
+}
+
+.chinaRose {
+  position: absolute;
+  bottom: 13%;
+  left: 16%;
+}
+
+.jasmine {
+  position: absolute;
+  right: 3%;
+  bottom: -5%;
+}
+
+.Jasmine2 {
+  position: absolute;
+  right: 0%;
+  top: 22%;
+  rotate: 180deg;
+}
+
+.aboutPosition {
+  margin-top: 17%;
+}
+
+.treatmentCards {
+  margin-left: 8%;
+}
+
+.TeamsCard {
+  margin-left: 12%;
+}
+
+.AppoinmentMargin {
+  margin-top: 8%;
+}
+
+.imgHover {
+  position: relative;
+}
+
+.imgHover:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-color;
+  opacity: 0.8; /* Adjust the opacity as desired */
+  z-index: 1;
+}
+
+.imgHover:hover::after {
+  content: "Body temperature";
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.imgHover:hover::after,
+.imgHover:hover::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgHover:hover::after {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+.imgHover:hover::before {
+  background-image: url("./imgs/1.png");
+  background-size: scale(1.5);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card {
+  --bs-card-border-radius: none;
+  --bs-card-inner-border-radius: none;
+  --bs-card-inner-border-radius: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.title {
+  font-size: 16px;
+  color: #666;
+}
+
+.thumb-img {
+  border-radius: 50%;
+}
+
+.borderHide {
+  border: 1px solid white !important;
+}
+
+.CardTxtLocation {
+  position: absolute;
+  bottom: 0;
+  left: 7%;
+  padding: 10px;
+  text-align: center;
+  width: 85%;
+}
+
+.input-grey {
+  border-bottom: 2px solid $light-steel !important;
+  border: none;
+  background-color: transparent;
+  border-radius: 0;
+  width: 100%;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $primary-color;
+}
+
+.image-placement {
+  width: calc(100% - 65%);
+  position: absolute;
+  left: calc(100% - 33%);
+  top: 0;
+  z-index: -1;
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.HoverPink:hover {
+  color: $primary-color !important;
+}
+
+.navbar-toggler {
+  border: none;
+  color: transparent !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27%23ff817e%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e") !important;
+}
+
+.modal-content-service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-image {
+  width: 50%;
+  height: auto;
+}
+
+.modal-text {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.modal-content {
+  border: none;
+}
+
+.close-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.BorderSet {
+  border: 1px solid $light-steel;
+  border-radius: 10px;
+}
+
+.modal-dialog {
+  max-width: 85%;
+}

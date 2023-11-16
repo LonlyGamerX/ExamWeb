@@ -1,0 +1,56 @@
+@port = 5029
+@route = newssubscription
+
+
+### GET - hent alle
+
+GET http://localhost:{{port}}/{{route}}/admin
+
+
+
+### GET - hent ud fra ID
+
+GET http://localhost:{{port}}/{{route}}/admin/606ac9d33acb3e45e4da0174
+
+
+
+### POST - opret ny (IKKE ADMIN - bruger skal kunne tilmelde sig)
+
+POST http://localhost:{{port}}/{{route}}
+content-type: application/json
+
+{
+    "email": "ny@testmail.dk",
+    "name": "Nyt navn"
+}
+
+
+
+### PUT - ret 
+
+PUT http://localhost:{{port}}/{{route}}/admin/606ac9d33acb3e45e4da0174
+content-type: application/json
+
+{
+    "email": "rettet@testmail.dk",
+    "name": "Rettet navn 33"
+}
+
+
+
+
+### DELETE - slet ud fra ID
+
+DELETE http://localhost:{{port}}/{{route}}/admin/606ac9d33acb3e45e4da0174
+
+
+
+
+### DELETE - slet ud fra EMAIL  (IKKE ADMIN - bruger skal kunne afmelde sig)
+
+DELETE http://localhost:{{port}}/{{route}}/afmeld
+content-type: application/json
+
+{
+    "email": "ny@testmail.dk"
+}

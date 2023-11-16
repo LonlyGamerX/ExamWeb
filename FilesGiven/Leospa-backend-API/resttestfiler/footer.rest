@@ -1,0 +1,25 @@
+@port = 5029
+@route = footer
+
+
+### GET - hent about (kun 1 about)
+
+GET http://localhost:{{port}}/{{route}}
+
+
+
+### PUT - ret 
+
+PUT http://localhost:{{port}}/{{route}}/admin/
+content-type: application/json
+
+{
+    "name": "Leospa Beauty Spa",
+    "cvr": "10520509",
+    "address": "Spavej 33, Strandby",
+    "zipncity": "9900 Skagen",
+    "phone": "23 33 43 55",
+    "email": "info@leospa-beauty.dk",
+    "openinghours": "Alle hverdage kl. 10 til 17 eller efter aftale"
+}
+

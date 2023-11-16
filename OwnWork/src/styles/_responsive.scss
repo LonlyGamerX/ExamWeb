@@ -1,0 +1,86 @@
+@import "./_variables.scss";
+
+@media (max-width: $small-screen) {
+  .image-placement {
+    display: none;
+  }
+  .brushImg {
+    display: none;
+  }
+  .btn-round {
+    width: 10% !important;
+  }
+  .jasmine {
+    display: none;
+  }
+  .chinaRose {
+    display: none;
+  }
+  .Jasmine2 {
+    display: none;
+  }
+  .nav-link {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .navbar-collapse {
+    background-color: $light-pink !important;
+  }
+}
+
+@media (min-width: $medium-screenA) and (max-width: $medium-screenB) {
+  .image-placement {
+    display: none;
+  }
+  .brushImg {
+    display: none;
+  }
+  .jasmine {
+    display: none;
+  }
+  .chinaRose {
+    display: none;
+  }
+  .Jasmine2 {
+    display: none;
+  }
+  .btn-round {
+    width: 19% !important;
+  }
+  .nav-link {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .navbar-collapse {
+    background-color: $light-pink !important;
+  }
+}
+
+@media (min-width: $large-screenA) and (max-width: $large-screenB) {
+  .image-placement {
+    display: none;
+  }
+  .jasmine {
+    bottom: 15% !important;
+  }
+  .chinaRose {
+    bottom: 37% !important;
+    left: 10% !important;
+  }
+  .btn-round {
+    width: 25% !important;
+  }
+  .Jasmine2 {
+    display: none;
+  }
+}
+
+@media (min-width: $Extra-large-screenA) and (max-width: $Extra-large-screenB) {
+  .image-placement {
+    width: 35% !important;
+    left: 90% !important;
+    top: 10% !important;
+    transform: translateX(-65%) !important;
+    border-radius: 15% !important;
+  }
+}

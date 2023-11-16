@@ -1,0 +1,56 @@
+@port = 5029
+@route = recommendation
+
+
+### GET - hent alle
+
+GET http://localhost:{{port}}/{{route}}
+
+
+
+### GET - hent x antal nyeste
+
+GET http://localhost:{{port}}/{{route}}/antal/2
+
+
+
+### GET - hent ud fra ID
+
+GET http://localhost:{{port}}/{{route}}/606a21c0feef26334c32e6d6
+
+
+
+### POST - opret ny
+
+POST http://localhost:{{port}}/{{route}}/admin
+content-type: application/json
+
+{
+    "name": "Lorem ipsum dolor sit amet",
+    "title": "Aliquam venenatis dignissim sodales",
+    "content": "Veniam consequuntur unde magnam molestiae, voluptatem explicabo quae ut numquam aperiam inventore sunt soluta tempora eveniet dicta quas? Maxime nesciunt eligendi dicta."
+    //"image": "hest.jpg" - brug Postman for at teste med upload af image!
+    
+}
+
+
+
+### PUT - ret 
+
+PUT http://localhost:{{port}}/{{route}}/admin/606a21cefeef26334c32e6d7
+content-type: application/json
+
+{
+    "name": "Rettet: Lorem ipsum dolor sit amet",
+    "title": "Rettet: Aliquam venenatis dignissim sodales",
+    "content": "Rettet: Veniam consequuntur unde magnam molestiae, voluptatem explicabo quae ut numquam aperiam inventore sunt soluta tempora eveniet dicta quas? Maxime nesciunt eligendi dicta."
+    //"image": "hest.jpg", - brug Postman for at teste med upload af image!
+    
+}
+
+
+
+
+### DELETE - slet ud fra ID
+
+DELETE http://localhost:{{port}}/{{route}}/admin/606a21cefeef26334c32e6d7

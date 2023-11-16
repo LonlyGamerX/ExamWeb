@@ -1,0 +1,19 @@
+@port = 5029
+@route = about
+
+
+### GET - hent about (kun 1 about)
+
+GET http://localhost:{{port}}/{{route}}
+
+
+
+### PUT - ret 
+
+PUT http://localhost:{{port}}/{{route}}/admin/
+content-type: application/json
+
+{
+    "title": "Come and you will be inspired!",
+    "content": "Enjoy one of our gorgeous spa treatments or packages in a truly relaxing environment. <b>Offering all aspects of beauty and spa therapy</b>. from brow shapes to body wraps, there is something on offer for everyone. <br />Check out our treatment menu or promotions today."
+}

@@ -1,0 +1,35 @@
+// Color Scheme
+// ------------
+
+// Color Scheme
+$dark-salmon-pink: #fc4d4d;
+$salmon-pink: #ff817e;
+$new-white: #fff9f8;
+$steel: #9193a6;
+$light-steel: #b9b9c0;
+$light-pink: #FBF5ED;
+
+$primary-color: $salmon-pink;
+
+// Font Family
+@font-face {
+  font-family: "Themify";
+  src: url("../fonts/themify.eot");
+  src: url("../fonts/themify.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/themify.woff") format("woff"),
+    url("../fonts/themify.ttf") format("truetype"),
+    url("../fonts/themify.svg#themify") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-family: -apple-system, BlinkMacSystemFont, "Themify", Arial, sans-serif;
+
+// Breakpoints
+$small-screen: 576px;
+$medium-screenA: 577px;
+$medium-screenB: 768px;
+$large-screenA: 769px;
+$large-screenB: 992px;
+$Extra-large-screenA: 993px;
+$Extra-large-screenB: 1200px;

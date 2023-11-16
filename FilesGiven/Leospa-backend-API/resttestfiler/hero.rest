@@ -1,0 +1,58 @@
+@port = 5029
+@route = hero
+
+
+### GET - hent alle
+
+GET http://localhost:{{port}}/{{route}}
+
+
+
+### GET - hent ud fra ID
+
+GET http://localhost:{{port}}/{{route}}/606a08a90e438f7908d4afe6
+
+
+
+### POST - opret ny
+
+POST http://localhost:{{port}}/{{route}}/admin
+content-type: application/json
+
+{
+    "title1": "Lorem ipsum dolor sit amet",
+    "title2": "Aliquam venenatis dignissim sodales",
+    "content": "Veniam consequuntur unde magnam molestiae, voluptatem explicabo quae ut numquam aperiam inventore sunt soluta tempora eveniet dicta quas? Maxime nesciunt eligendi dicta.",
+    "link": "http://google.com"
+}
+
+
+
+### PUT - ret 
+
+PUT http://localhost:{{port}}/{{route}}/admin/606a20e4883d6b7b5c7f2dee
+content-type: application/json
+
+{
+    "title1": "Rettet: Lorem ipsum dolor sit amet",
+    "title2": "Rettet: Aliquam venenatis dignissim sodales",
+    "content": "Rettet: Veniam consequuntur unde magnam molestiae, voluptatem explicabo quae ut numquam aperiam inventore sunt soluta tempora eveniet dicta quas? Maxime nesciunt eligendi dicta.",
+    "link": "http://google.com/"
+}
+
+### PATCH - ret show-status for Hero (show=true=vises på forsiden, show=false=ikke vises på forsiden) 
+### - alle andre Heros sættes til false, når en Hero får status show = kun 1 Hero kan være show=true
+
+PATCH http://localhost:{{port}}/{{route}}/admin/606a20e4883d6b7b5c7f2dee
+content-type: application/json
+
+{
+    "show": true
+}
+
+
+
+
+### DELETE - slet ud fra ID
+
+DELETE http://localhost:{{port}}/{{route}}/admin/606a20e4883d6b7b5c7f2dee
